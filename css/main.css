@@ -1,0 +1,121 @@
+/*----------------------------inicia para el header.html--------------------------*/
+#cuerpo{
+	/*background-color: red;*/
+	background-color: #F2F2Fa;
+	width: 98%;
+	margin: auto;
+}
+
+/*--------------------------inicio del index.html--------------------------------*/
+#div_index{		
+	margin-top: -15px;
+	width: 100%;
+}
+#aside_left{
+	background-color: #262938;
+	width: 20%;		
+	border-radius: 25px;
+	float: left;	
+}
+#aside_left p{
+	width: 95%;
+	text-align: justify;	
+	font-size: 16px;
+	color: #fff;
+	margin: auto;
+}
+#seccion_index{
+	width: 58%;	
+	border-radius: 25px;
+
+	float: left;
+}
+#contenido_index{
+	width: 96%;	
+	border-radius: 25px;	
+	border-style:solid;	
+	border-color: #262938;
+	margin: auto;	
+	float: right;
+}
+#aside_right{		
+	width: 20%;		
+	border-radius: 25px;
+	margin-top: 40px;
+	float: right;	
+}
+
+#datos{	
+	width: 45%;
+	margin-top: 25px;
+	float: left;
+}
+#formulario{
+	width: 90%;	
+	float: right;
+}
+
+#resultado{	
+	width: 50%;
+	margin-top: 25px;
+	margin-left: 10px;
+	float: left;
+}
+#resultado img{	
+	border-radius: 25px;
+}
+#resultado p{
+	text-align: justify;
+}
+/*--------------------------final del index.html--------------------------------*/
+
+/*----------------------------inicio del sliderbanner----------------------------------*/
+.sliderbanner{
+	width: 78%; 
+	height: 230px;
+	margin: auto;
+	overflow: hidden;	
+	border-radius: 25px;
+	margin-top: 10px;
+	margin-bottom: -18px;
+	float: right;
+}
+.sliderbanner ul{
+	display: flex;
+	padding: 0;	
+	width: 400%;		
+	animation: cambiobanner 20s infinite 2s alternate ease-out;
+}
+.sliderbanner li{
+	width: 100%;
+	list-style: none;		
+}
+.sliderbanner img{
+	width: 100%;	
+	height: 230px;
+}
+@keyframes cambiobanner{
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/*-----------------------------final del sliderbanner----------------------------------*/
+/*-----------------------------inicio del footer----------------------------------*/
+#pie{
+	clear: both;	
+}
+#der{	
+	color: #000;
+	font-family: consolas;
+	text-align: center;
+}
+
+/*-----------------------------final del footer----------------------------------*/
