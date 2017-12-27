@@ -1,12 +1,12 @@
-<?php	
-	//iniciar la session 
+<?php
+	//iniciar la session
 	session_start();
 	//seccion de constantes
-	define('IMC', true);		
-	require_once('lib/smarty/Smarty.class.php');	
+	define('IMC', true);
+	require_once('lib/smarty/Smarty.class.php');
 	//las clases de travelweb
 
-//--------------------------------CLASE SISTEMA-----------------------------------	
+//--------------------------------CLASE SISTEMA-----------------------------------
 	class Sistema{
 
 	}
@@ -22,24 +22,24 @@
 			$this->smarty = new Smarty();
 			$this->smarty->setTemplateDir('templates/');
 			$this->smarty->setCompileDir('templates_c/');
-			$this->smarty->setConfigDir('configs/'); 	
+			$this->smarty->setConfigDir('configs/');
 			$this->smarty->setCacheDir('cache/');
 		}
 
-		public function calcula($peso,$altura,$sistema){							
+		public function calcula($peso,$altura,$sistema){
 			if ($this->validaPeso($peso)) {
-				if ($this->validaAltura($altura)) {		
-					if ($peso == 0 || $altura == 0) {				
-						$this->smarty->display("index.html");				
+				if ($this->validaAltura($altura)) {
+					if ($peso == 0 || $altura == 0) {
+						$this->smarty->display("index.html");
 					}else{
 						if ($sistema === "internacional") {
-							$alt=$altura / 100;							
+							$alt=$altura / 100;
 							$resultado=$peso / pow($alt, 2);
 						}else{
 							$peso=($peso * 0.453592);
 							$alt= (($altura * 2.54) / 100);
 							$resultado=$peso / pow($alt, 2);
-							
+
 						}
 						if($resultado < 10.00 || $resultado > 60)//NUEVO
 							{
@@ -83,7 +83,7 @@
 									}//FIN ELSE 4
 								}//FIN ELSE 3
 							}//FIN ELSE 2
-						}//FIN ELSE 1			
+						}//FIN ELSE 1
 						//switch con los diferentes tipos de imc tomando en cuenta los rangos
 						switch ($clasificación) {//NUEVO
 							case 'DS':
@@ -110,7 +110,7 @@
 							case 'OMo':
 								$mensaje = "Debes de cuidar mucho tu alimentación, estas en un grado de sobre peso sonde tu salud peligra, acude a un medico para que puedas hacerte examenes pronto y te de la mejor recomendación para poder perder peso, puede que con una dieta normal no puedas llegar a tu peso ideal, te recomendamos tener mucha paciencia y responsabilidad para cuidar tu salud.";
 								break;
-							
+
 							default:
 								$mensaje = "Recomendacion";
 								break;
@@ -120,7 +120,7 @@
 						$this->smarty->assign('resultado',$resultado);
 						$this->smarty->assign('msj',$mensaje);
 						$this->smarty->display("index.html");
-					}							
+					}
 				}else{
 					$this->smarty->assign('msjnum',"Inserta datos numericos");
 					$this->smarty->display("index.html");
@@ -128,11 +128,11 @@
 			}else{
 				$this->smarty->assign('msjnum',"Inserta datos numericos");
 				$this->smarty->display("index.html");
-			}						
+			}
 		}
 
 		public function validaPeso($peso){
-			if (!is_numeric($peso) || $peso < 0) {	//NUEVO						
+			if (!is_numeric($peso) || $peso < 0) {	//NUEVO
 				return false;
 			}else{
 				return true;
@@ -140,7 +140,7 @@
 		}
 
 		public function validaAltura($altura){
-			if (!is_numeric($altura) || $altura <0 ) {		//NUEVO						
+			if (!is_numeric($altura) || $altura <0 ) {		//NUEVO
 				return false;
 			}else{
 				return true;
@@ -152,7 +152,7 @@
 	$web=new IMC;
 	$web->crearSmarty();
 	$smarty=$web->smarty;
-	
+
 	//metodo assign de smarty se encarga de mandar las variables a la plantilla
 
 ?>
