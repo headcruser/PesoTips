@@ -1,9 +1,9 @@
 <?php
-	include("sistema.class.php");		
-	if (isset($_GET['c'])) {
+	include("sistema.class.php");
+
+	if (isset($_GET['c'])) 
 		$c=$_GET['c'];
-	}else{
+	else
 		$c="index";
-	}	
+	
 	include("controllers/$c.controller.php");		
-?>

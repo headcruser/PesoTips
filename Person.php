@@ -35,10 +35,6 @@ class Person
 
 	public function getHeight(){ return $this->_height; }
 	
-	/**
-	* __toString
-	* @return Print Information Object
-	*/
 	public function __toString()
 	{
 	  return  '<pre>'.
@@ -51,7 +47,6 @@ interface IMCalculator
 {
 	 public function calculate( );
 }
-
 
 class International implements IMCalculator
 {
@@ -68,13 +63,17 @@ class International implements IMCalculator
 	public function isObjectPerson( $person){ return is_object( $person); }
 
 
-	public function calculate( )
-	{
-		$alt=$this->_person->getHeight() / 100;
-		
-		$resultado=$this->_person->getWeight() / pow($alt, 2);
+	public function calculate( ){
+		return $this->calculateWeightPerson( $this->calculateHeightPerson() );
+	}
 
-		return $resultado;
+	public function calculateWeightPerson( $alt ){
+		return $this->_person->getWeight() / pow( $alt , 2 );
+	}
+
+	public function calculateHeightPerson()
+	{
+		return $this->_person->getHeight() / 100;
 	}
 
 	/**
@@ -87,7 +86,6 @@ class International implements IMCalculator
 	          'PERSON    	:'.$this->_person;
 	}
 }
-
 
 class Ingles implements IMCalculator
 {
@@ -106,18 +104,18 @@ class Ingles implements IMCalculator
 
 	public function calculate( )
 	{
-		$peso=($this->_person->getWeight() * 0.453592);
-		$alt= (($this->_person->getHeight() * 2.54) / 100);
-		
-		$resultado=$peso / pow($alt, 2);
-
+		$resultado=$this->calculateWeightPerson() / pow($this->calculateHeightPerson(), 2);
 		return $resultado;
 	}
 
-	/**
-	* __toString
-	* @return Print Information Object
-	*/
+	public function calculateWeightPerson(){
+		return ($this->_person->getWeight() * 0.453592);
+	}
+
+	public function calculateHeightPerson(){
+		return ( ($this->_person->getHeight() * 2.54) / 100);
+	}
+
 	public function __toString()
 	{
 	  return  '<pre>'.
@@ -149,15 +147,3 @@ class DL extends typeWeigth
 		return $value >= 17.00 && $value <= 18.49;
 	}
 }
-
-echo "<pre>";
-
-$System = new Ingles( Person::create( 25, 31 ) );
-//$System = new International( Person::create( 50.5, 170 ) );
-
-$valueIMC = $System->calculate();
-print($valueIMC);
-
-$dl= new DL();
-if ( $dl->isValidRange( $valueIMC) ) 
-	$dl->getMessage();

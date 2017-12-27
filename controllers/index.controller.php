@@ -1,6 +1,5 @@
 <?php
-	if (!defined('IMC')) {
-		die("Not direct access allowed");
-	}
+	if ( !defined('IMC') ) 
+		throw new Exception("Not direct access allowed ");
+	
 	$smarty->display("index.html");
-?>

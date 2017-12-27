@@ -1,24 +1,21 @@
 <?php
-	//iniciar la session
 	session_start();
-	//seccion de constantes
+
 	define('IMC', true);
+
 	require_once('lib/smarty/Smarty.class.php');
-	//las clases de travelweb
+	
+	require_once('Person.php');
 
-//--------------------------------CLASE SISTEMA-----------------------------------
-	class Sistema{
-
-	}
 //------------------------------CLASE CALCIMC----------------------------
-	class IMC extends Sistema{
-
-		//este constructor lo voy a utilizar en el futuro
+	class IMC 
+	{
 		function __construct(){
-			# code...
+			$this->crearSmarty();
 		}
 
-		public function crearSmarty(){
+		private  function crearSmarty()
+		{
 			$this->smarty = new Smarty();
 			$this->smarty->setTemplateDir('templates/');
 			$this->smarty->setCompileDir('templates_c/');
@@ -26,33 +23,46 @@
 			$this->smarty->setCacheDir('cache/');
 		}
 
-		public function calcula($peso,$altura,$sistema){
-			if ($this->validaPeso($peso)) {
-				if ($this->validaAltura($altura)) {
-					if ($peso == 0 || $altura == 0) {
-						$this->smarty->display("index.html");
-					}else{
-						if ($sistema === "internacional") {
-							$alt=$altura / 100;
-							$resultado=$peso / pow($alt, 2);
-						}else{
-							$peso=($peso * 0.453592);
-							$alt= (($altura * 2.54) / 100);
-							$resultado=$peso / pow($alt, 2);
 
+		public function calcula($peso,$altura,$sistema)
+		{
+			try 
+			{
+				$persona= Person::create( $peso, $altura ); 	
+			} catch (Exception $e) {
+				$this->smarty->assign('msjnum',"Inserta datos numericos");
+				$this->smarty->display("index.html");
+				die();
+			}
+			
+			if ($peso == 0 || $altura == 0) 
+					$this->smarty->display("index.html");
+				else
+				{
+					if ($sistema === "internacional") 
+						$System = new International( $persona );
+					else
+						$System = new Ingles( $persona );
+
+					$resultado = $System->calculate();
+
+					
+					if($resultado < 10.00 || $resultado > 60)//NUEVO
+						{
+							$mensaje = "Los datos sobrepasan lo esperado, favor de revisarlos";
+							$this->smarty->assign('msj',$mensaje);
+							$this->smarty->display("index.html");
 						}
-						if($resultado < 10.00 || $resultado > 60)//NUEVO
-							{
-								$mensaje = "Los datos sobrepasan lo esperado, favor de revisarlos";
-								$this->smarty->assign('msj',$mensaje);
-								$this->smarty->display("index.html");
-							}
+
 						//If en el cuál se define la clasificación de pesos NUEVO
-						if ($resultado<16.00){
+						if ($resultado<16.00)
+						{
 							$clasificación = "DS";//Delgadez Severa
 						}//FIN IF1
-						else{
-							if ($resultado >= 16.00 && $resultado <=16.99){
+						else
+						{
+							if ($resultado >= 16.00 && $resultado <=16.99)
+							{
 								$clasificación = "DM"; // Delgadez Moderada
 							}//FIN IF2
 							else{
@@ -84,8 +94,11 @@
 								}//FIN ELSE 3
 							}//FIN ELSE 2
 						}//FIN ELSE 1
+
+
 						//switch con los diferentes tipos de imc tomando en cuenta los rangos
-						switch ($clasificación) {//NUEVO
+						switch ($clasificación) 
+						{//NUEVO
 							case 'DS':
 								$mensaje = "Podría ser que puedas subir de peso un poco más, te recomendamos evitar la comida chatarra, esto podría perjudicarte más, lo mejor que puedes hacer es AGREGAR CALORIAS SALUDABLEs e incorporar snacks, así mismo revisar nuestras dietas" ;
 								break;
@@ -114,45 +127,16 @@
 							default:
 								$mensaje = "Recomendacion";
 								break;
-						}
+						} // Swutch
 
 						//$mensaje="El índice de masa corporal (IMC) es una medida de asociación entre la masa y la talla de un individuo ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet. Hay que destacar que, no se pueden aplicar los mismos valores de IMC en niños y adolescentes debido a su constante crecimiento de estatura y desarrollo corporal, por lo que se obtiene un IMC respecto a su edad y sexo. Por lo que primero deberá primero contar con la fecha de nacimiento y de medición para obtener la edad calculada y así ser más precisos al categorizar a éste grupo de edad.";
 						$this->smarty->assign('resultado',$resultado);
 						$this->smarty->assign('msj',$mensaje);
 						$this->smarty->display("index.html");
-					}
-				}else{
-					$this->smarty->assign('msjnum',"Inserta datos numericos");
-					$this->smarty->display("index.html");
-				}
-			}else{
-				$this->smarty->assign('msjnum',"Inserta datos numericos");
-				$this->smarty->display("index.html");
-			}
-		}
+				}//Else
 
-		public function validaPeso($peso){
-			if (!is_numeric($peso) || $peso < 0) {	//NUEVO
-				return false;
-			}else{
-				return true;
-			}
-		}
-
-		public function validaAltura($altura){
-			if (!is_numeric($altura) || $altura <0 ) {		//NUEVO
-				return false;
-			}else{
-				return true;
-			}
-		}
-
-	}
+			} //metodo
+	} // Clase 
 
 	$web=new IMC;
-	$web->crearSmarty();
 	$smarty=$web->smarty;
-
-	//metodo assign de smarty se encarga de mandar las variables a la plantilla
-
-?>
