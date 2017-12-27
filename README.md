@@ -6,14 +6,14 @@ dos sistemas
 * Internacional 
 * Ingles
 
-## integrantes
+## Integrantes del proyecto
 
 ***
-Daniel Martinez 
-Marcos Laguna
-Rodrigo Eredia 
-Betzabet salas 
-Karla Estefania
+* Daniel Martinez Sierra 
+* Marcos Laguna Velazquez
+* Rodrigo Eredia 
+* Betzabet salas 
+* Karla Estrada
 
 ## Actualizacion (Diciembre 2017)
 
