@@ -18,13 +18,27 @@
 				$System = new Ingles( $persona );
 
 			if ( $peso == 0 && $altura == 0 ) 
-				$smarty->assign('msjnum'," Valores en cero, Ingresa valores validos");
+				$view->assign('msjnum'," Valores en cero, Ingresa valores validos");
 			else
-				$web->calcula( $persona ,$System );
+			{
+				$imc=new IMC();
+				$resultado=$imc->calcula( $System );
+				foreach ($imc->typeWeigth as $value)
+				{
+					if($value->isValidRange( $resultado)){
+						$mensaje=$value->getMessage();
+						break;
+					}
+				}	
+				$view->assign('resultado',$resultado);
+				$view->assign('msj',$mensaje);
+			}
 
 		} catch (Exception $e) {
-			$smarty->assign('msjnum',"Inserta datos numericos");
+			$view->assign('msjnum',$e->getMessage() );
+		}catch ( TypeError $tye){
+			$view->assign('msjnum', $tye->getMessage());
 		}
 	}
-	else	
-		$smarty->display("index.html");
+	
+	$view->display("index.html");

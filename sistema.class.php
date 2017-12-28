@@ -19,59 +19,26 @@
 	
 	require_once('vendor/autoload.php');
 	
-	require_once('Person.php');	
+	require_once('Model.php');	
 	
-//------------------------------CLASE CALCIMC----------------------------
-	class IMC 
+
+class System
+{
+	
+	function __construct( )
 	{
-		private $_typeWeigth;
-		
-		function __construct( )
-		{
-			$this->crearSmarty( );
-			$this->buildTypeWeigth( );
-		}
-
-		private function buildTypeWeigth( )
-		{
-			$this->typeWeigth=array(
-				new DS(),new DM(),new DL(), new N(),
-				new PO(),new OL(),new OM(),new OMo() 
-			);
-		}
-		private  function crearSmarty()
-		{
-			$this->smarty = new Smarty();
-			$this->smarty->setTemplateDir('templates/');
-			$this->smarty->setCompileDir('templates_c/');
-			$this->smarty->setConfigDir('configs/');
-			$this->smarty->setCacheDir('cache/');
-		}
-
-		public function calcula( $persona , $System)
-		{
-			$resultado = $System->calculate();
-
-			if($resultado < 10.00 || $resultado > 60)//NUEVO
-			{
-				$mensaje = "Los datos sobrepasan lo esperado, favor de revisarlos";
-				$this->smarty->assign('msj',$mensaje);
-				
-			}else
-			{	
-				foreach ($typeWeigth as $value){
-					if($value->isValidRange( $resultado)){
-						$mensaje=$value->getMessage();
-						break;
-					}
-				}
-				$this->smarty->assign('resultado',$resultado);
-				$this->smarty->assign('msj',$mensaje);
-			}
-
-			$this->smarty->display("index.html");
-		}
+		$this->createView( );
 	}
 
-	$web=new IMC;
-	$smarty=$web->smarty;
+	private  function createView()
+	{
+		$this->view = new Smarty();
+		$this->view->setTemplateDir('templates/');
+		$this->view->setCompileDir('templates_c/');
+		$this->view->setConfigDir('configs/');
+		$this->view->setCacheDir('cache/');
+	}
+}
+
+	$web=new System();
+	$view=$web->view;

@@ -2,4 +2,4 @@
 	if ( !defined('IMC') ) 
 		throw new Exception("Not direct access allowed ");
 	
-	$smarty->display("index.html");
+	$view->display("index.html");
