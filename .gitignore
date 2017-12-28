@@ -1,5 +1,15 @@
+# Created by https://www.gitignore.io/api/sass,less,linux,windows,composer,visualstudiocode
 
-# Created by https://www.gitignore.io/api/linux,windows,visualstudiocode
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### Less ###
+*.less
 
 ### Linux ###
 *~
@@ -15,6 +25,10 @@
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
+
+### Sass ###
+.sass-cache/
+*.css.map
 
 ### VisualStudioCode ###
 .vscode/*
@@ -45,4 +59,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/linux,windows,visualstudiocode
+# End of https://www.gitignore.io/api/sass,less,linux,windows,composer,visualstudiocode
