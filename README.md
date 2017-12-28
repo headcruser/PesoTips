@@ -6,6 +6,14 @@ dos sistemas
 * Internacional 
 * Ingles
 
+***
+## Equipo GPS
+
+<p align="center">
+<img src="doc/recursos/ClearSoft.png" title="Perfiles aerodinamicos." width="100" height="100">
+<div align="center">Equipo GPS.</div>
+</p>
+
 ## Integrantes del proyecto
 
 ***
