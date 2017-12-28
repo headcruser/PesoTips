@@ -4,10 +4,27 @@
 		
 	if ( isset($_POST) ) 
 	{		
-		$peso=$_POST['peso'];			
-		$altura=$_POST['altura'];
-		$sistema=$_POST['sistemametrico'];		
-		$web->calcula($peso,$altura,$sistema);
+		try 
+		{
+			$sistema=$_POST['sistemametrico'];
+			$peso=$_POST['peso'];			
+			$altura=$_POST['altura'];
+
+			$persona= Person::create( $peso, $altura );
+			
+			if ($sistema === "internacional") 
+				$System = new International( $persona );
+			else
+				$System = new Ingles( $persona );
+
+			if ( $peso == 0 && $altura == 0 ) 
+				$smarty->assign('msjnum'," Valores en cero, Ingresa valores validos");
+			else
+				$web->calcula( $persona ,$System );
+
+		} catch (Exception $e) {
+			$smarty->assign('msjnum',"Inserta datos numericos");
+		}
 	}
-	else			
+	else	
 		$smarty->display("index.html");

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28, created on 2017-12-27 22:29:09
+/* Smarty version 3.1.28, created on 2017-12-28 06:04:47
   from "C:\xampp\htdocs\IMC\templates\document.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28',
-  'unifunc' => 'content_5a4410a5bb1d62_08459576',
+  'unifunc' => 'content_5a447b6f16a2c5_47603300',
   'file_dependency' => 
   array (
     'a56e927c8dc3dcbc4d5256bd1ec47e5ad05cc9b9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\IMC\\templates\\document.html',
-      1 => 1514410141,
+      1 => 1514437476,
       2 => 'file',
     ),
   ),
@@ -19,25 +19,30 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a4410a5bb1d62_08459576 ($_smarty_tpl) {
+function content_5a447b6f16a2c5_47603300 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php echo '<script'; ?>
- src="js/jquery-3.1.0.min.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+jquery-3.1.0.min.js"><?php echo '</script'; ?>
 >
   	<?php echo '<script'; ?>
- src="js/jquery.validate.min.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+jquery.validate.min.js"><?php echo '</script'; ?>
 >
 
-  	<link rel="stylesheet" type="text/css" href="css/jcarousel.connected-carousels.css">
+  	<link rel="stylesheet" type="text/css" href="<?php echo @constant('CSS');?>
+jcarousel.connected-carousels.css">
   	<?php echo '<script'; ?>
- src="js/jquery.jcarousel.min.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+jquery.jcarousel.min.js"><?php echo '</script'; ?>
 >
   	<?php echo '<script'; ?>
- src="js/jcarousel.connected-carousels.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+jcarousel.connected-carousels.js"><?php echo '</script'; ?>
 >
 
 	<?php echo '<script'; ?>
@@ -47,11 +52,12 @@ $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, false);
  src="//code.jquery.com/jquery-migrate-1.2.1.min.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- type="text/javascript" src="../js/jquery.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="<?php echo @constant('JS');?>
+jquery.min.js"><?php echo '</script'; ?>
 >
 	<?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'js', array (
-  0 => 'block_104915a4410a5b7c018_85014183',
+  0 => 'block_238605a447b6f135ac6_82011681',
   1 => false,
   3 => 0,
   2 => 0,
@@ -59,18 +65,22 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'js', array (
 ?>
  		
 
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css" >
+	<link rel="stylesheet" type="text/css" href="<?php echo @constant('CSS');?>
+bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="<?php echo @constant('CSS');?>
+bootstrap-theme.min.css" >
 	<?php echo '<script'; ?>
- src="../js/jquery.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+jquery.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src="../js/bootstrap/bootstrap.min.js"><?php echo '</script'; ?>
+ src="<?php echo @constant('JS');?>
+bootstrap.min.js"><?php echo '</script'; ?>
 >
 	
 	<?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'estilos', array (
-  0 => 'block_74485a4410a5b811e8_48854941',
+  0 => 'block_141735a447b6f148135_21682950',
   1 => false,
   3 => 0,
   2 => 0,
@@ -84,20 +94,21 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'estilos', array 
 	<meta charset="UTF-8">
 	<title><?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'title', array (
-  0 => 'block_254575a4410a5b85fb1_03616438',
+  0 => 'block_63545a447b6f14d4d9_87927224',
   1 => false,
   3 => 0,
   2 => 0,
 ));
 ?>
 </title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo @constant('CSS');?>
+main.css">
 </head>
 <body id="cuerpo">
 	
 	<?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'header', array (
-  0 => 'block_300385a4410a5b8acf9_98877683',
+  0 => 'block_157795a447b6f15a997_08188751',
   1 => false,
   3 => 0,
   2 => 0,
@@ -107,7 +118,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'header', array (
 	
 	<?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'contenido', array (
-  0 => 'block_229995a4410a5ba84f8_39842322',
+  0 => 'block_63045a447b6f160290_25282829',
   1 => false,
   3 => 0,
   2 => 0,
@@ -117,7 +128,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'contenido', arra
 	
 	<?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'footer', array (
-  0 => 'block_293805a4410a5bacdd9_52119575',
+  0 => 'block_277375a447b6f164ab1_32354471',
   1 => false,
   3 => 0,
   2 => 0,
@@ -127,29 +138,29 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, 'footer', array (
 </body>
 </html><?php }
 /* {block 'js'}  file:document.html */
-function block_104915a4410a5b7c018_85014183($_smarty_tpl, $_blockParentStack) {
+function block_238605a447b6f135ac6_82011681($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'js'} */
 /* {block 'estilos'}  file:document.html */
-function block_74485a4410a5b811e8_48854941($_smarty_tpl, $_blockParentStack) {
+function block_141735a447b6f148135_21682950($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'estilos'} */
 /* {block 'title'}  file:document.html */
-function block_254575a4410a5b85fb1_03616438($_smarty_tpl, $_blockParentStack) {
+function block_63545a447b6f14d4d9_87927224($_smarty_tpl, $_blockParentStack) {
 ?>
 PLANTILLA PADRE<?php
 }
 /* {/block 'title'} */
 /* {block 'header'}  file:document.html */
-function block_300385a4410a5b8acf9_98877683($_smarty_tpl, $_blockParentStack) {
+function block_157795a447b6f15a997_08188751($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'header'} */
 /* {block 'contenido'}  file:document.html */
-function block_229995a4410a5ba84f8_39842322($_smarty_tpl, $_blockParentStack) {
+function block_63045a447b6f160290_25282829($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'contenido'} */
 /* {block 'footer'}  file:document.html */
-function block_293805a4410a5bacdd9_52119575($_smarty_tpl, $_blockParentStack) {
+function block_277375a447b6f164ab1_32354471($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'footer'} */
 }
