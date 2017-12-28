@@ -1,0 +1,19 @@
+{
+    "name": "headcruser/imc",
+    "description": "Proyecto para modernizar Pagina web de peso tips",
+    "type": "proyect",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Martinez Sierra",
+            "email": "headcruser@gmail.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "dev-trunk",
+        "kint-php/kint": "0.9",
+        "wixel/gump": "dev-master",
+        "twbs/bootstrap": "^3.3",
+        "components/jquery": "^3.2"
+    }
+}

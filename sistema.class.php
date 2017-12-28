@@ -12,11 +12,15 @@
 	define ('IMG', INDEX.'images'.DIRECTORY_SEPARATOR);
 	
 	define ('TEMPLATES', INDEX.'templates'.DIRECTORY_SEPARATOR);
+
+	define ('CSS_VENDOR', INDEX.'vendor\twbs\bootstrap\dist\css'.DIRECTORY_SEPARATOR);	
+
+	define ('JS_VENDOR', INDEX.'vendor\components\jquery'.DIRECTORY_SEPARATOR);
 	
-	require_once('lib/smarty/Smarty.class.php');
+	require_once('vendor/autoload.php');
 	
 	require_once('Person.php');	
-
+	
 //------------------------------CLASE CALCIMC----------------------------
 	class IMC 
 	{
