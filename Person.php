@@ -131,7 +131,34 @@ abstract class typeWeigth
 
 	abstract function isValidRange( $value);
 
-	public function getMessage(){ print_r( $this->_message); }
+	public function getMessage(){ return $this->_message; }
+}
+
+class DS extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Podría ser que puedas subir de peso un poco más, te recomendamos evitar la comida chatarra, esto podría perjudicarte más, lo mejor que puedes hacer es AGREGAR CALORIAS SALUDABLEs e incorporar snacks, así mismo revisar nuestras dietas";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value<16.00;
+	}
+}
+
+
+class DM extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Estás un poco bajo de peso pero con una comida rica en calorias saludables, comidas pequeñas en distintos lapsos del día y snacks saludables si tienes hambre y no te es posible tomar un descanso del trabajo y comer.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 16.00 && $value <=16.99;
+	}
 }
 
 class DL extends typeWeigth
@@ -147,3 +174,70 @@ class DL extends typeWeigth
 		return $value >= 17.00 && $value <= 18.49;
 	}
 }
+
+
+class N extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Felicidades estas dentro de tu peso ideal, te recomendamos seguir así, haciendo ejercicio, comiendo sano, y evitar los alimentos con demasiada grasa, así como respetar tus horas de comida.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 18.50 && $value <= 24.99;
+	}
+}
+
+class PO extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message=" Cuidado estas un poco arriba de tu peso ideal, si sigues así podrias llegar a tener un sobre peso o peor, un plan alimentario ideal para actuar contra el sobrepeso siempre ha de ser normocalórico o con una mínima restricción de calorías.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 25.00 && $value <= 29.99;
+	}
+}
+
+class OL extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Cuidado estas un poco por encima de el peso recomendado para tu estatura, debes de elegir alimentos con poca grasa, reducir su consumo de azucar y alimentos chatarra.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 30.00 && $value <= 34.99;
+	}
+}
+
+class OM extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Mucho cuidado estas cerca de llegar a una obesidad morbida, te recomendamos repartir tu alimentación en 5 comidasd al dia con alimentos de poca grasa y con nutrientes, así como no saltar ninguna comida y realizar un poco de ejercicio aumentando moderadamente.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 35.00 && $value <= 39.99;
+	}
+}
+
+class OMo extends typeWeigth
+{
+	function __construct(  )
+	{
+		$this->_message="Debes de cuidar mucho tu alimentación, estas en un grado de sobre peso sonde tu salud peligra, acude a un medico para que puedas hacerte examenes pronto y te de la mejor recomendación para poder perder peso, puede que con una dieta normal no puedas llegar a tu peso ideal, te recomendamos tener mucha paciencia y responsabilidad para cuidar tu salud.";
+	}
+
+	public function isValidRange( $value )
+	{
+		return $value >= 40.00 && $value <= 60.00;
+	}
+}
+
