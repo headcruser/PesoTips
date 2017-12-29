@@ -1,8 +1,6 @@
 <?php
+use PesoTipsDotMe\Application\Service\ServiceCalculatorIMC;
 use PesoTipsDotMe\Common\Person;
-use PesoTipsDotMe\Common\International;
-use PesoTipsDotMe\Common\Ingles;
-use PesoTipsDotMe\Common\IMC;
 
 	if (!defined('IMC')) 
 		throw new Exception("Not direct access allowed ");
@@ -11,35 +9,15 @@ use PesoTipsDotMe\Common\IMC;
 	{		
 		try 
 		{
+			$persona= Person::create( $_POST['peso'], $altura=$_POST['altura'] , $_POST['edad']);
 
-			$sistema=$_POST['sistemametrico'];
-			$peso=$_POST['peso'];			
-			$altura=$_POST['altura'];
-
-			$persona= Person::create( $peso, $altura );
+			$service = new ServiceCalculatorIMC( $persona, $_POST['sistemametrico'] );
 			
-			if ($sistema === "internacional") 
-				$System = new International( $persona );
-			else
-				$System = new Ingles( $persona );
-
-			if ( $peso == 0 && $altura == 0 ) 
-				$view->assign('msjnum'," Valores en cero, Ingresa valores validos");
-			else
-			{
-				$imc=new IMC();
-				$resultado=$imc->calcula( $System );
-				foreach ($imc->typeWeigth as $value)
-				{
-					if($value->isValidRange( $resultado)){
-						$mensaje=$value->getMessage();
-						break;
-					}
-				}	
-				$view->assign('resultado',$resultado);
-				$view->assign('msj',$mensaje);
-			}
-
+			$result=$service->calculateIMC();
+			
+			$view->assign('resultado',$result['resultado']);
+			$view->assign('msj',$result['mensaje']);
+			
 		} catch ( \Exception $e ) {
 			$view->assign('msjnum',$e->getMessage() );
 		}catch ( \TypeError $tye ){
