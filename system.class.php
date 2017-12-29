@@ -19,22 +19,22 @@
 
 	//////////////////////// RESOURCES /////////////////////////////////
 	
-	define ('CSS', INDEX.'css'.DIRECTORY_SEPARATOR);	
+	define ('CSS', 'css'.DIRECTORY_SEPARATOR);	
 	
-	define ('JS', INDEX.'js'.DIRECTORY_SEPARATOR);
+	define ('JS', 'js'.DIRECTORY_SEPARATOR);
 	
-	define ('IMG', INDEX.'images'.DIRECTORY_SEPARATOR);
+	define ('IMG', 'images'.DIRECTORY_SEPARATOR);
 
-	define ('TEMPLATES', INDEX.'templates'.DIRECTORY_SEPARATOR);
+	define ('TEMPLATES', 'templates'.DIRECTORY_SEPARATOR);
 
 	//////////////////// COMPOSER DEPENDENCES /////////////////////////
-	define ('CSS_VENDOR', INDEX.'vendor\twbs\bootstrap\dist\css'.DIRECTORY_SEPARATOR);	
+	define ('CSS_VENDOR','vendor/twbs/bootstrap/dist/css'.DIRECTORY_SEPARATOR);	
 	
-	define ('JS_VENDOR_BOOT', INDEX.'vendor\twbs\bootstrap\dist\js'.DIRECTORY_SEPARATOR);
+	define ('JS_VENDOR_BOOT','vendor/twbs/bootstrap/dist/js'.DIRECTORY_SEPARATOR);
 
-	define ('JS_VENDOR', INDEX.'vendor\components\jquery'.DIRECTORY_SEPARATOR);
+	define ('JS_VENDOR', 'vendor/components/jquery'.DIRECTORY_SEPARATOR);
 
-	define ('FONT', INDEX.'vendor\fortawesome\font-awesome\css'.DIRECTORY_SEPARATOR);
+	define ('FONT', 'vendor/fortawesome/font-awesome/css'.DIRECTORY_SEPARATOR);
 
 	require_once('vendor/autoload.php');
 				
