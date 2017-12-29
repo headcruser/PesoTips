@@ -14,8 +14,13 @@
 	define ('TEMPLATES', INDEX.'templates'.DIRECTORY_SEPARATOR);
 
 	define ('CSS_VENDOR', INDEX.'vendor\twbs\bootstrap\dist\css'.DIRECTORY_SEPARATOR);	
+	
+	define ('JS_VENDOR_BOOT', INDEX.'vendor\twbs\bootstrap\dist\js'.DIRECTORY_SEPARATOR);
 
 	define ('JS_VENDOR', INDEX.'vendor\components\jquery'.DIRECTORY_SEPARATOR);
+
+	define ('FONT', INDEX.'vendor\fortawesome\font-awesome\css'.DIRECTORY_SEPARATOR);
+
 	
 	require_once('vendor/autoload.php');
 	

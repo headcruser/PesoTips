@@ -3,11 +3,12 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS_VENDOR}bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS_VENDOR}bootstrap-theme.min.css" >
-	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS}jcarousel.connected-carousels.css">
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS}main.css">
+	<link rel="stylesheet" type="text/css" href="{$smarty.const.FONT}font-awesome.min.css">
 	{block name=estilos}{/block} 	{* Hojas de Estilo que se deben agregar*}
 
 	<script src="{$smarty.const.JS_VENDOR}jquery.min.js"></script>
+	<script src="{$smarty.const.JS_VENDOR_BOOT}bootstrap.min.js"></script>
 	{block name=js}{/block} {*Archvos para javascript*}
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,12 +16,9 @@
 	<meta charset="UTF-8">
 	<title>{block name=title}PLANTILLA PADRE{/block}</title>
 </head>
-<body id="cuerpo">
-	
-	{block name=header}{/block}
-	
-	{block name=contenido}{/block}
-	
-	{block name=footer}{/block}
+<body >
+	 {block name=header}{/block}
+	 {block name=contenido}{/block} 
+	 {block name=footer}{/block}
 </body>
 </html>
