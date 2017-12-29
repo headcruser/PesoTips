@@ -2,6 +2,8 @@
 /**
 * Model Person for Contol weith
 */
+namespace PesoTipsDotMe\Common;
+use Exception;
 class Person 
 {
 	private $_weight;

@@ -21,29 +21,25 @@
 
 	define ('FONT', INDEX.'vendor\fortawesome\font-awesome\css'.DIRECTORY_SEPARATOR);
 
-	
 	require_once('vendor/autoload.php');
-	
-	require_once('Model.php');	
-	
-
-class System
-{
-	
-	function __construct( )
+				
+	class System
 	{
-		$this->createView( );
-	}
+		
+		function __construct( )
+		{
+			$this->createView( );
+		}
 
-	private  function createView()
-	{
-		$this->view = new Smarty();
-		$this->view->setTemplateDir('templates/');
-		$this->view->setCompileDir('templates_c/');
-		$this->view->setConfigDir('configs/');
-		$this->view->setCacheDir('cache/');
+		private  function createView()
+		{
+			$this->view = new Smarty();
+			$this->view->setTemplateDir('templates/');
+			$this->view->setCompileDir('templates_c/');
+			$this->view->setConfigDir('configs/');
+			$this->view->setCacheDir('cache/');
+		}
 	}
-}
 
 	$web=new System();
 	$view=$web->view;

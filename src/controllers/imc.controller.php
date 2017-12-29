@@ -1,4 +1,9 @@
 <?php
+use PesoTipsDotMe\Common\Person;
+use PesoTipsDotMe\Common\International;
+use PesoTipsDotMe\Common\Ingles;
+use PesoTipsDotMe\Common\IMC;
+
 	if (!defined('IMC')) 
 		throw new Exception("Not direct access allowed ");
 		
@@ -6,6 +11,7 @@
 	{		
 		try 
 		{
+
 			$sistema=$_POST['sistemametrico'];
 			$peso=$_POST['peso'];			
 			$altura=$_POST['altura'];
@@ -34,10 +40,10 @@
 				$view->assign('msj',$mensaje);
 			}
 
-		} catch (Exception $e) {
+		} catch ( \Exception $e ) {
 			$view->assign('msjnum',$e->getMessage() );
-		}catch ( TypeError $tye){
-			$view->assign('msjnum', $tye->getMessage());
+		}catch ( \TypeError $tye ){
+			$view->assign('msjnum', "Ingresa valores numericos");
 		}
 	}
 	
