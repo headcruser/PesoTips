@@ -6,6 +6,28 @@ body {
   font-family: "Open Sans", Arial, Sans-serif;
   font-size: 16px; }
 
+/**ESTILOS PARA NAVBAR DE BOOSTRAP */
+.navbar {
+  background-color: #3c4045 !important; }
+
+.navbar-brand:link, .navbar-brand:visited {
+  color: #ecf0f1 !important; }
+
+.navbar-brand:hover, .navbar-brand:active {
+  color: #9b59b6 !important; }
+
+#navbar li a:link, #navbar li a:visited {
+  color: #9b59b6 !important; }
+
+#navbar li a:hover, #navbar li a:active {
+  color: #9b59b6 !important; }
+
+.dropdown-menu {
+  background-color: white !important; }
+
+.open > a {
+  background-color: #white !important; }
+
 .imc {
   margin-bottom: 30px; }
   .imc .titulo {
@@ -20,6 +42,26 @@ body {
     border-style: solid;
     border-color: #262938;
     padding: 15px 10px; }
+
+.checkslider {
+  margin-bottom: 0px; }
+
+.datos {
+  margin-bottom: 250px; }
+  .datos .titulo {
+    background: #9b59b6;
+    font-size: 24px;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+    padding: 15px 150px;
+    border-radius: 3px; }
+  .datos .boton {
+    background: #9b59b6;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer; }
+    .datos .boton:hover {
+      background: #8e44ad; }
 
 footer {
   background: #3c4045; }

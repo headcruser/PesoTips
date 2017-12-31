@@ -1,4 +1,4 @@
-{extends file="document.html"}
+{extends file="template/document.html"}
 {block name=title}PESOTIPS.COM CALCULADORA IMC{/block}
 {block name=contenido}
 <!-- CONTENEDOR PRINCIPAL -->
@@ -7,21 +7,24 @@
 		<!-- SECCION IZQUIERDA -->
 		<div class="col-md-4">
 			<div class="col-md-12">
-				 {include file='imc.html'}
+				 {include file='sections/imc.html'}
 			</div>
 			<!-- SECCION ENLACES  -->
 			<div class="col-md-12">
-				 {include file='enlaces.html'}
+				 {include file='sections/enlaces.html'}
 			</div>
 		</div>
 		<!-- SECCION DERECHA -->
 		<div class="col-md-8">
-			<div class="col-md-12">
-				 {include file='slider.html'}
+			<div class="row">
+				<div class="col-md-12">
+					{include file='sections/slider.html'}
+				</div>
 			</div>
-
-			<div class="col-md-12">
-				 {include file='datos.html'}
+			<div class="row">
+				<div class="col-md-12">
+					 {include file='sections/datos.html'}
+				</div>
 			</div>
 		</div>
 	</div>
