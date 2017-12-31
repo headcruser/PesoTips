@@ -6,40 +6,59 @@ body {
   font-family: "Open Sans", Arial, Sans-serif;
   font-size: 16px; }
 
-footer .direccion {
-  background: #3c4045;
-  padding: 30px 0;
-  color: #fff; }
-  footer .direccion .titulo {
-    font-size: 32px;
-    line-height: 32px;
-    font-weight: 300;
-    margin-bottom: 30px; }
-  footer .direccion .calle,
-  footer .direccion .telefono,
-  footer .direccion .correo {
-    margin-bottom: 10px; }
-  footer .direccion .logo img {
-    margin-top: 70px; }
-footer .social {
-  text-align: center;
-  padding: 20px 0; }
-  footer .social a {
-    padding: 10px;
-    display: inline-block;
-    margin: 0 20px;
-    width: 50px;
-    font-size: 22px;
+footer {
+  background: #3c4045; }
+  footer .direccion {
+    padding: 30px 0;
     color: #fff;
-    background: #000;
-    border-radius: 100px; }
-    footer .social a:hover {
-      text-decoration: none; }
-    footer .social a.facebook {
-      background: #3b5998; }
-    footer .social a.twitter {
-      background: #55acee; }
-    footer .social a.youtube {
-      background: #cd201f; }
+    text-align: center; }
+    footer .direccion .titulo {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 300;
+      margin-bottom: 30px; }
+    footer .direccion .calle,
+    footer .direccion .telefono,
+    footer .direccion .correo {
+      margin-bottom: 10px; }
+    footer .direccion .logo img {
+      margin-top: 70px; }
+  footer .derechos {
+    padding: 30px 0;
+    color: #fff;
+    text-align: center; }
+    footer .derechos .titulo {
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 300;
+      margin-bottom: 30px; }
+    footer .derechos .descripcion {
+      margin-bottom: 10px; }
+  footer .social {
+    text-align: center;
+    padding: 30px 0; }
+    footer .social .titulo {
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 300;
+      margin-bottom: 30px;
+      color: #fff; }
+    footer .social a {
+      padding: 10px;
+      display: inline-block;
+      margin: 0 20px;
+      width: 50px;
+      font-size: 22px;
+      color: #fff;
+      background: #000;
+      border-radius: 100px; }
+      footer .social a:hover {
+        text-decoration: none; }
+      footer .social a.facebook {
+        background: #3b5998; }
+      footer .social a.twitter {
+        background: #55acee; }
+      footer .social a.youtube {
+        background: #cd201f; }
 
 /*# sourceMappingURL=style.css.map */
