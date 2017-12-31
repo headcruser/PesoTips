@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32-dev-38, created on 2017-12-31 06:23:10
+/* Smarty version 3.1.32-dev-38, created on 2017-12-31 07:51:35
   from 'C:\xampp2\htdocs\IMC\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-38',
-  'unifunc' => 'content_5a48743e95f7a9_59600720',
+  'unifunc' => 'content_5a4888f7d1b130_01577752',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e98d37e95df1608b6d45385ee2188038317ba01d' => 
     array (
       0 => 'C:\\xampp2\\htdocs\\IMC\\templates\\index.html',
-      1 => 1514697788,
+      1 => 1514703071,
       2 => 'file',
     ),
   ),
@@ -24,59 +24,41 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:datos.html' => 1,
   ),
 ),false)) {
-function content_5a48743e95f7a9_59600720 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4888f7d1b130_01577752 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2032441205a48743e952fb2_94241252', 'title');
-?>
- <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7222795935a48743e954ce7_46700460', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19228302475a4888f7d02e80_57197080', 'title');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17444803225a48743e955e55_03130446', 'contenido');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8749004965a4888f7d05ff5_21065546', 'contenido');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "document.html");
 }
 /* {block 'title'} */
-class Block_2032441205a48743e952fb2_94241252 extends Smarty_Internal_Block
+class Block_19228302475a4888f7d02e80_57197080 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_2032441205a48743e952fb2_94241252',
+    0 => 'Block_19228302475a4888f7d02e80_57197080',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-CALCULADORA IMC<?php
+PESOTIPS.COM CALCULADORA IMC<?php
 }
 }
 /* {/block 'title'} */
-/* {block 'header'} */
-class Block_7222795935a48743e954ce7_46700460 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'header' => 
-  array (
-    0 => 'Block_7222795935a48743e954ce7_46700460',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
- <?php
-}
-}
-/* {/block 'header'} */
 /* {block 'contenido'} */
-class Block_17444803225a48743e955e55_03130446 extends Smarty_Internal_Block
+class Block_8749004965a4888f7d05ff5_21065546 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'contenido' => 
   array (
-    0 => 'Block_17444803225a48743e955e55_03130446',
+    0 => 'Block_8749004965a4888f7d05ff5_21065546',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
