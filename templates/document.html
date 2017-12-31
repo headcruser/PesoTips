@@ -2,11 +2,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS_VENDOR}bootstrap.min.css" >
-	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS_VENDOR}bootstrap-theme.min.css" >
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.CSS}style.css">
 	<link rel="stylesheet" type="text/css" href="{$smarty.const.FONT}font-awesome.min.css">
 	{block name=estilos}{/block} 	{* Hojas de Estilo que se deben agregar*}
-
 	<script src="{$smarty.const.JS_VENDOR}jquery.min.js"></script>
 	<script src="{$smarty.const.JS_VENDOR_BOOT}bootstrap.min.js"></script>
 	{block name=js}{/block} {*Archvos para javascript*}
@@ -19,6 +17,6 @@
 <body >
 	 {block name=header}{/block}
 	 {block name=contenido}{/block}
-	 {block name=footer}{/block}
+	 {block name=footer}{include file='footer.html'}{/block}
 </body>
 </html>
