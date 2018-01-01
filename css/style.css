@@ -1,3 +1,4 @@
+/**VALORES DEL SITIO WEB */
 * {
   margin: 0;
   pading: 0; }
@@ -5,6 +6,8 @@
 body {
   font-family: "Open Sans", Arial, Sans-serif;
   font-size: 16px; }
+  body a {
+    color: #9b59b6; }
 
 /**ESTILOS PARA NAVBAR DE BOOSTRAP */
 .navbar {
@@ -38,30 +41,61 @@ body {
     font-weight: 300;
     color: #ffffff; }
   .imc .descripcion {
-    border-radius: 3px;
-    border-style: solid;
-    border-color: #262938;
     padding: 15px 10px; }
 
 .checkslider {
   margin-bottom: 0px; }
 
+/**PONER UN BORDER PARA REVISAR CONTENEDORES
+ * border-radius: 3px
+ * border-style: solid
+ * border-color: #262938* */
+/**SECCION DATOS */
 .datos {
-  margin-bottom: 250px; }
-  .datos .titulo {
-    background: #9b59b6;
-    font-size: 24px;
-    color: #ecf0f1;
-    margin-bottom: 30px;
-    padding: 15px 150px;
-    border-radius: 3px; }
-  .datos .boton {
-    background: #9b59b6;
-    color: #fff;
-    border-radius: 3px;
-    cursor: pointer; }
-    .datos .boton:hover {
-      background: #8e44ad; }
+  margin-bottom: 20px;
+  width: 100%; }
+  .datos .formulario {
+    width: 100%;
+    height: 150%;
+    margin-bottom: 10px; }
+    .datos .formulario .titulo {
+      background: #9b59b6;
+      font-size: 24px;
+      color: #ecf0f1;
+      margin-bottom: 30px;
+      padding: 15px 150px;
+      border-radius: 3px; }
+    .datos .formulario .boton {
+      background: #9b59b6;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer; }
+      .datos .formulario .boton:hover {
+        background: #8e44ad; }
+  .datos .resultado {
+    margin-bottom: 30px; }
+    .datos .resultado .titulo {
+      background: #9b59b6;
+      font-size: 24px;
+      color: #ecf0f1;
+      margin-bottom: 30px;
+      padding: 15px 150px;
+      border-radius: 3px;
+      text-align: center; }
+    .datos .resultado .tituloImagen {
+      font-size: 24px;
+      color: #9b59b6;
+      margin-bottom: 8px; }
+    .datos .resultado .valor {
+      margin-top: 5px;
+      margin-bottom: 15px; }
+    .datos .resultado .recomendacion {
+      margin-bottom: 25 px; }
+      .datos .resultado .recomendacion .subtitulo {
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        color: #9b59b6; }
 
 footer {
   background: #3c4045; }

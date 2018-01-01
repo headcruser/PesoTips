@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32-dev-38, created on 2017-12-31 09:45:42
+/* Smarty version 3.1.32-dev-38, created on 2018-01-01 00:23:47
   from 'C:\xampp2\htdocs\IMC\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-38',
-  'unifunc' => 'content_5a48a3b69e2613_25121126',
+  'unifunc' => 'content_5a497183d59731_08731330',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e98d37e95df1608b6d45385ee2188038317ba01d' => 
     array (
       0 => 'C:\\xampp2\\htdocs\\IMC\\templates\\index.html',
-      1 => 1514709941,
+      1 => 1514762626,
       2 => 'file',
     ),
   ),
@@ -24,26 +24,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:sections/datos.html' => 1,
   ),
 ),false)) {
-function content_5a48a3b69e2613_25121126 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a497183d59731_08731330 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13309401705a48a3b69d5593_63794444', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17620718085a497183d4ac58_95888295', 'title');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17267025705a48a3b69d74b1_14610806', 'contenido');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5590257405a497183d4daa3_70016539', 'contenido');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "template/document.html");
 }
 /* {block 'title'} */
-class Block_13309401705a48a3b69d5593_63794444 extends Smarty_Internal_Block
+class Block_17620718085a497183d4ac58_95888295 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_13309401705a48a3b69d5593_63794444',
+    0 => 'Block_17620718085a497183d4ac58_95888295',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,12 +53,12 @@ PESOTIPS.COM CALCULADORA IMC<?php
 }
 /* {/block 'title'} */
 /* {block 'contenido'} */
-class Block_17267025705a48a3b69d74b1_14610806 extends Smarty_Internal_Block
+class Block_5590257405a497183d4daa3_70016539 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'contenido' => 
   array (
-    0 => 'Block_17267025705a48a3b69d74b1_14610806',
+    0 => 'Block_5590257405a497183d4daa3_70016539',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,7 +69,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 	<div class="row">
 		<!-- SECCION IZQUIERDA -->
 		<div class="col-md-4">
-			<div class="col-md-12">
+			<div class="col-md-12 ">
 				 <?php $_smarty_tpl->_subTemplateRender('file:sections/imc.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 			</div>
@@ -88,8 +88,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-					 <?php $_smarty_tpl->_subTemplateRender('file:sections/datos.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+				<div class="col-md-12 datos">
+					<?php $_smarty_tpl->_subTemplateRender('file:sections/datos.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 				</div>
 			</div>
